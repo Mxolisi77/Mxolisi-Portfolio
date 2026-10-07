@@ -100,10 +100,10 @@
 
 .site_footer_links ul {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  column-gap: 24px;
-  row-gap: 12px;
+  column-gap: 10px;
+  white-space: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -115,7 +115,7 @@
 
 .site_footer_links a {
   color: rgba(255, 255, 255, 0.72);
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -130,7 +130,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 20px;
+  gap: 12px 14px;
 }
 
 .site_footer_social_card {
@@ -165,7 +165,7 @@
 }
 
 .site_footer_social_label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 

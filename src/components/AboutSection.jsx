@@ -79,9 +79,13 @@ function AboutSection({ showLearnMore = true }) {
             </div>
 
             <div className="about_section_actions">
-              <button type="button" className="boxed-btn3-line">
+              <a
+                className="boxed-btn3-line"
+                href="/img/pdf/MXOLISI%20ZWANE%20CV.pdf"
+                download="MXOLISI ZWANE CV.pdf"
+              >
                 Download CV
-              </button>
+              </a>
               {showLearnMore && (
                 <Link className="about_section_link" to="/about">
                   Learn More
