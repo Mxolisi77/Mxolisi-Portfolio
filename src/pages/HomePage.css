@@ -1,0 +1,88 @@
+.home_page {
+  width: 100%;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+.home_reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home_reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home_page .service_area {
+  position: relative;
+  background:
+    radial-gradient(circle at top right, rgba(219, 154, 100, 0.08), transparent 28%),
+    #3b2930;
+}
+
+.home_page .download_area {
+  position: relative;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(219, 154, 100, 0.1), transparent 32%),
+    #311e25;
+}
+
+.home_page .gallery_area {
+  position: relative;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(219, 154, 100, 0.1), transparent 30%),
+    #311e25;
+}
+
+.home_reveal.is-visible .services_card,
+.home_reveal.is-visible .works_card {
+  animation: homeCardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_reveal.is-visible .services_card:nth-child(1),
+.home_reveal.is-visible .works_card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.home_reveal.is-visible .services_card:nth-child(2),
+.home_reveal.is-visible .works_card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.home_reveal.is-visible .services_card:nth-child(3),
+.home_reveal.is-visible .works_card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.home_reveal.is-visible .works_card:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+@keyframes homeCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home_reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .home_reveal.is-visible .services_card,
+  .home_reveal.is-visible .works_card {
+    animation: none;
+  }
+}

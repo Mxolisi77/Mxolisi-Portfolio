@@ -109,3 +109,35 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+html.home-scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+html.home-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.mxolisi_name_motion {
+  display: inline-block;
+  animation: nameSlideColor 3.2s ease-in-out infinite;
+}
+
+@keyframes nameSlideColor {
+  0%,
+  100% {
+    color: #fff;
+    transform: translateY(0);
+  }
+
+  50% {
+    color: #db9a64;
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mxolisi_name_motion {
+    animation: none;
+  }
+}

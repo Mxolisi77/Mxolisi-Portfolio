@@ -60,10 +60,14 @@
 }
 
 .services_card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.01);
   border-color: rgba(219, 154, 100, 0.45);
   background: rgba(219, 154, 100, 0.06);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+}
+
+.services_card:hover .services_card_icon {
+  transform: scale(1.08) rotate(-4deg);
 }
 
 .services_card_top {
@@ -89,6 +93,7 @@
   border-radius: 16px;
   background: rgba(219, 154, 100, 0.12);
   border: 1px solid rgba(219, 154, 100, 0.22);
+  transition: transform 0.35s ease;
 }
 
 .services_card_icon img {

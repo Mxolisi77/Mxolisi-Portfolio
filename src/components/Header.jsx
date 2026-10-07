@@ -10,7 +10,7 @@ function Header() {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2">
                   <div className="logo">
-                    <Link to="/" className="logo-text">
+                    <Link to="/" className="logo-text mxolisi_name_motion">
                       Mxolisi.
                     </Link>
                   </div>
@@ -30,19 +30,6 @@ function Header() {
                         </li>
                         <li>
                           <Link to="/about">about</Link>
-                        </li>
-                        <li>
-                          <span>
-                            blog <i className="ti-angle-down" />
-                          </span>
-                          <ul className="submenu">
-                            <li>
-                              <Link to="/blog">blog</Link>
-                            </li>
-                            <li>
-                              <Link to="/single-blog">single-blog</Link>
-                            </li>
-                          </ul>
                         </li>
                         <li>
                           <Link to="/contact">Contact</Link>

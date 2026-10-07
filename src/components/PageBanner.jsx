@@ -4,7 +4,14 @@ function PageBanner({ title }) {
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
-            <div className="bradcam_text text-center">
+            <div
+        className={`bradcam_text text-center${
+          title === 'Academic Qualifications' || 
+          title === 'Works' || 
+          title === 'My Services' || 
+          title === 'Contact' ? ' bradcam_text--animation' : ''
+        }`}
+            >
               <h3>{title}</h3>
             </div>
           </div>

@@ -36,40 +36,12 @@ const quickLinks = [
 ]
 
 function Footer() {
-  const year = new Date().getFullYear()
-
   return (
     <footer className="site_footer">
       <div className="site_footer_glow" aria-hidden="true" />
 
       <div className="container">
-        <div className="site_footer_cta">
-          <span className="site_footer_badge">Let&apos;s collaborate</span>
-          <h2>
-            <span className="site_footer_cta_heading">
-              Do you have a project?{' '}
-              <Link to="/contact" className="site_footer_cta_link">
-                Let&apos;s talk
-              </Link>
-            </span>
-          </h2>
-          <p>
-            I&apos;m always excited to collaborate on new ideas and build innovative digital
-            solutions. Let&apos;s create something amazing together.
-          </p>
-          <Link className="boxed-btn3-line site_footer_cta_btn" to="/contact">
-            Start a Project
-          </Link>
-        </div>
-
         <div className="site_footer_main">
-          <div className="site_footer_brand">
-            <Link to="/" className="site_footer_logo">
-              Mxolisi.
-            </Link>
-            <p>UI/UX Designer &amp; Frontend Developer crafting clean, modern digital experiences.</p>
-          </div>
-
           <div className="site_footer_links">
             <h3>Quick Links</h3>
             <ul>
@@ -111,12 +83,6 @@ function Footer() {
           </div>
         </div>
 
-        <div className="site_footer_bottom">
-          <p>
-            Copyright &copy; {year} Mxolisi. All rights reserved.
-          </p>
-          <p className="site_footer_credit">Designed &amp; built with care.</p>
-        </div>
       </div>
     </footer>
   )

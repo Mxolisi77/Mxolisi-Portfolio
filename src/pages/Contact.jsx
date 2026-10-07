@@ -1,4 +1,5 @@
 import PageBanner from '../components/PageBanner.jsx'
+import './Contact.css'
 
 function Contact() {
   return (
@@ -6,113 +7,116 @@ function Contact() {
       <PageBanner title="Contact" />
       <section className="contact-page-section">
         <div className="container">
-          <div className="contact-hero-card">
-            <div className="contact-hero-content">
-              <span className="contact-eyebrow">Let&apos;s connect</span>
-              <h2>Reach out for collaborations, projects, or a quick conversation.</h2>
-              <p>
-                I&apos;m always happy to discuss ideas, software solutions, and opportunities to create something meaningful together.
+          <div className="contact-page-layout">
+            <div className="contact-page-intro">
+              <span className="contact-page-eyebrow">Let&apos;s connect</span>
+              <h2>
+                Have an idea? <em>Let&apos;s make it real.</em>
+              </h2>
+              <p className="contact-page-lead">
+                I&apos;m happy to discuss projects, software solutions, and opportunities to create
+                something meaningful together.
               </p>
-            </div>
-            <div className="contact-highlight-list">
-              <div className="contact-highlight-item">
-                <strong>Fast response</strong>
-                <span>Usually within 1 business day</span>
-              </div>
-              <div className="contact-highlight-item">
-                <strong>Remote ready</strong>
-                <span>Available for online collaboration</span>
-              </div>
-            </div>
-          </div>
 
-          <div className="row contact-main-grid">
-            <div className="col-lg-5">
-              <div className="contact-sidebar">
-                <div className="media contact-info">
-                  <span className="contact-info__icon">
+              <div className="contact-page-availability">
+                <div>
+                  <span className="contact-page-status" aria-hidden="true" />
+                  <strong>Fast response</strong>
+                  <p>Usually within 1 business day</p>
+                </div>
+                <div>
+                  <strong>Remote ready</strong>
+                  <p>Available for online collaboration</p>
+                </div>
+              </div>
+
+              <div className="contact-page-details" aria-label="Contact details">
+                <div className="contact-page-detail">
+                  <span className="contact-page-detail-icon" aria-hidden="true">
                     <i className="ti-home" />
                   </span>
-                  <div className="media-body">
-                    <h3>Pretoria, South Africa</h3>
+                  <div>
+                    <span className="contact-page-detail-label">Based in</span>
+                    <strong>Pretoria, South Africa</strong>
                     <p>Available for remote and in-person meetings</p>
                   </div>
                 </div>
-                <div className="media contact-info">
-                  <span className="contact-info__icon">
+                <a className="contact-page-detail" href="tel:+2779107772">
+                  <span className="contact-page-detail-icon" aria-hidden="true">
                     <i className="ti-tablet" />
                   </span>
-                  <div className="media-body">
-                    <h3>079 107 7772</h3>
-                    <p>Mon to Fri 9am to 6pm</p>
-                  </div>
-                </div>
-                <div className="media contact-info">
-                  <span className="contact-info__icon">
+                  <span>
+                    <span className="contact-page-detail-label">Call me</span>
+                    <strong>079 107 7772</strong>
+                    <span className="contact-page-detail-note">Mon to Fri, 9am to 6pm</span>
+                  </span>
+                </a>
+                <a className="contact-page-detail" href="mailto:Mxolisizwane07@gmail.com">
+                  <span className="contact-page-detail-icon" aria-hidden="true">
                     <i className="ti-email" />
                   </span>
-                  <div className="media-body">
-                    <h3>Mxolisizwane07@gmail.com</h3>
-                    <p>Send your message anytime</p>
-                  </div>
-                </div>
+                  <span>
+                    <span className="contact-page-detail-label">Email</span>
+                    <strong>Mxolisizwane07@gmail.com</strong>
+                    <span className="contact-page-detail-note">Send your message anytime</span>
+                  </span>
+                </a>
               </div>
             </div>
 
-            <div className="col-lg-7">
-              <form className="contact-form-card form-contact contact_form" id="contactForm" noValidate>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-group">
-                      <textarea
-                        className="form-control w-100"
-                        name="message"
-                        id="message"
-                        cols="30"
-                        rows="8"
-                        placeholder="Tell me about your project"
-                      />
-                    </div>
+            <div className="contact-page-form-panel">
+              <div className="contact-page-form-heading">
+                <span>Project inquiry</span>
+                <h3>Tell me what you&apos;re planning.</h3>
+                <p>I&apos;ll get back to you as soon as I can.</p>
+              </div>
+              <form className="contact-page-form form-contact contact_form" id="contactForm" noValidate>
+                <div className="contact-page-fields">
+                  <div className="contact-page-field contact-page-field--wide">
+                    <label htmlFor="message">Project details</label>
+                    <textarea
+                      className="form-control"
+                      name="message"
+                      id="message"
+                      rows="5"
+                      placeholder="Tell me about your project"
+                    />
                   </div>
-                  <div className="col-sm-6">
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        name="name"
-                        id="name"
-                        type="text"
-                        placeholder="Your name"
-                      />
-                    </div>
+                  <div className="contact-page-field">
+                    <label htmlFor="name">Your name</label>
+                    <input
+                      className="form-control"
+                      name="name"
+                      id="name"
+                      type="text"
+                      placeholder="e.g. Alex Morgan"
+                    />
                   </div>
-                  <div className="col-sm-6">
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        name="email"
-                        id="email"
-                        type="email"
-                        placeholder="Your email"
-                      />
-                    </div>
+                  <div className="contact-page-field">
+                    <label htmlFor="email">Email address</label>
+                    <input
+                      className="form-control"
+                      name="email"
+                      id="email"
+                      type="email"
+                      placeholder="you@example.com"
+                    />
                   </div>
-                  <div className="col-12">
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        name="subject"
-                        id="subject"
-                        type="text"
-                        placeholder="Subject"
-                      />
-                    </div>
+                  <div className="contact-page-field contact-page-field--wide">
+                    <label htmlFor="subject">Subject</label>
+                    <input
+                      className="form-control"
+                      name="subject"
+                      id="subject"
+                      type="text"
+                      placeholder="What would you like to work on?"
+                    />
                   </div>
                 </div>
-                <div className="form-group mt-3">
-                  <button type="submit" className="button button-contactForm btn_4 boxed-btn">
-                    Send Message
-                  </button>
-                </div>
+                <button type="submit" className="contact-page-submit">
+                  Send Message
+                  <i className="ti-arrow-right" aria-hidden="true" />
+                </button>
               </form>
             </div>
           </div>

@@ -79,29 +79,13 @@
 
 .site_footer_main {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 1fr;
-  gap: 40px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  max-width: 820px;
+  margin: 0 auto;
+  gap: 80px;
   padding: 48px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.site_footer_logo {
-  display: inline-block;
-  margin-bottom: 14px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.site_footer_brand p {
-  margin: 0;
-  max-width: 320px;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 15px;
-  line-height: 1.7;
-  text-align: left;
 }
 
 .site_footer_links h3,
@@ -115,13 +99,18 @@
 }
 
 .site_footer_links ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .site_footer_links li + li {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .site_footer_links a {
@@ -138,32 +127,28 @@
 }
 
 .site_footer_social_grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
 }
 
 .site_footer_social_card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
+  gap: 8px;
+  padding: 4px 0;
   color: #fff;
   text-decoration: none;
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+    color 0.25s ease;
 }
 
 .site_footer_social_card:hover,
 .site_footer_social_card:focus-visible {
-  transform: translateY(-2px);
-  border-color: rgba(219, 154, 100, 0.45);
-  background: rgba(219, 154, 100, 0.08);
+  transform: translateY(-1px);
+  color: #db9a64;
   outline: none;
 }
 
@@ -206,10 +191,7 @@
 @media (max-width: 991px) {
   .site_footer_main {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .site_footer_brand {
-    grid-column: span 2;
+    gap: 48px;
   }
 }
 
@@ -232,12 +214,8 @@
     padding: 36px 0;
   }
 
-  .site_footer_brand {
-    grid-column: span 1;
-  }
-
-  .site_footer_brand p {
-    max-width: none;
+  .site_footer_social_grid {
+    gap: 12px 24px;
   }
 
   .site_footer_bottom {
